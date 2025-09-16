@@ -1,5 +1,6 @@
 package com.quizapp.codessolution
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -27,7 +28,10 @@ class MainActivity : AppCompatActivity() {
             if (binding.NameET.text.toString().isEmpty()){
                 Toast.makeText(this@MainActivity,"Please Enter Your Name to Start The Quiz", Toast.LENGTH_SHORT).show()
             } else{
-                Toast.makeText(this@MainActivity,"${binding.NameET.text} You can Now Start The Quiz",Toast.LENGTH_SHORT).show()
+                val intent = Intent(this@MainActivity, QuestionsActivity::class.java)
+                startActivity(intent)
+                finish()
+               // Toast.makeText(this@MainActivity,"${binding.NameET.text} You can Now Start The Quiz",Toast.LENGTH_SHORT).show()
             }
         }
     }
