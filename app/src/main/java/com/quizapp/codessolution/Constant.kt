@@ -1,6 +1,6 @@
 package com.quizapp.codessolution
 
-class Constant {
+object Constant {
     fun getQuestions() : ArrayList<Question>{
         val questionList = ArrayList<Question>()
 
