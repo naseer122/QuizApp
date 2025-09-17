@@ -1,10 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".QuestionsActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/NameTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name of Person Who Attempt the Quiz"
+        android:gravity="center"
+        android:layout_margin="15dp"
+        android:textSize="16sp"
+        />
+
+
+    <TextView
+        android:id="@+id/QuesionTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Question?"
+        android:gravity="center"
+        android:layout_margin="15dp"
+        android:textSize="16sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3/3"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/OptionATV"
+        android:background="@drawable/optionbackroud"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="Option A"
+        android:gravity="center"
+        android:layout_margin="15dp"
+        android:textSize="16sp"/>
+    <TextView
+        android:id="@+id/OptionBTV"
+        android:background="@drawable/optionbackroud"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="Option B"
+        android:gravity="center"
+        android:layout_margin="15dp"
+        android:textSize="16sp"/>
+    <TextView
+        android:id="@+id/OptionCTV"
+        android:background="@drawable/optionbackroud"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="Option C"
+        android:gravity="center"
+        android:layout_margin="15dp"
+        android:textSize="16sp"/>
+    <TextView
+        android:id="@+id/OptionDTV"
+        android:background="@drawable/optionbackroud"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="Option D"
+        android:gravity="center"
+        android:layout_margin="15dp"
+        android:textSize="16sp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cornerRadius="10dp"
+        android:text="Next Question"
+        android:id="@+id/btnNext"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"/>
+
+
+
+</LinearLayout>
